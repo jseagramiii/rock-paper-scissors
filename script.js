@@ -2,19 +2,20 @@ const array = ['rock', 'paper', 'scissors']
 
 let playerSelection = prompt('please type: rock, paper, or scissors')
 playerSelection = playerSelection.toLowerCase()
+console.log('you chose: ' + playerSelection)
 
 let computerSelection = array[Math.floor(Math.random() * array.length)]
+console.log('computer chose: ' + computerSelection)
 
 const playRound = () => {
-  console.log('computer chose: ' + computerSelection)
-
   if (playerSelection == computerSelection) {
-    console.log('tie')
+    alert('tie')
   } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-    console.log('sorry you lost')
+    alert('sorry you lost :(')
   } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-    console.log('sorry you lost')
+    alert('sorry, you lost :(')
   } else {
-    console.log('you won')
+    alert('You Win!')
   }
 }
+playRound()
